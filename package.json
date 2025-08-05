@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,md,yml,yaml}\"",
     "test": "jest",
     "check:type": "tsc --noEmit",
     "prepare": "husky"
@@ -28,6 +29,7 @@
     "eslint-config-next": "15.4.5",
     "husky": "^9.1.7",
     "jest": "^30.0.5",
+    "prettier": "3.6.2",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
