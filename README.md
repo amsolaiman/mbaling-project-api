@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">mBALING Project API</h1>
+
+The mBALING project is a student housing management system for on-campus housing establishments in the Mindanao State University campus. It is intended to assist the university Housing Management Division in the record-keeping of non-dormitory-residing students' residential data, and to bring the current housing marketing and searching methods in the campus online. It consists of a mobile application that manages the activities and displays the contents posted by users, and a desktop admin system that administers user records and the creation and deletion of user accounts.
+
+## Overview
+
+The mBALING API is a mock API designed to simulate real-life data and server interactions for the mBALING project.
 
 ## Getting Started
 
-First, run the development server:
+### Install dependencies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Copy `.env.sample` to `.env` and configure as needed.
+2. Start the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+pnpm dev
+```
 
-## Learn More
+### Build
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+pnpm build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Team
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Lead Developer:** [Abdul Moiz Solaiman](https://www.linkedin.com/in/amsolaiman/)
