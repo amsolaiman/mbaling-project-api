@@ -2,10 +2,10 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 
-import jestPlugin from 'eslint-plugin-jest';
-import importPlugin from 'eslint-plugin-import';
 import eslintParserTs from '@typescript-eslint/parser';
 import eslintPluginTs from '@typescript-eslint/eslint-plugin';
+import jestPlugin from 'eslint-plugin-jest';
+import importPlugin from 'eslint-plugin-import';
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,12 +16,16 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends('eslint-config-next'),
+  ...compat.extends(
+    'eslint-config-next',
+    'next/typescript',
+    'next/core-web-vitals'
+  ),
   {
     ignores: ['**/node_modules/**', '**/out/*', '**/.next/*', 'next.config.js'],
   },
   {
-    files: ['**/*.ts', '**/*.tsx'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       globals: {
         ...jestPlugin.environments.globals.globals,
@@ -36,16 +40,12 @@ const eslintConfig = [
     plugins: {
       jest: jestPlugin,
       import: importPlugin,
-      '@typescript-eslint': eslintPluginTs,
       'unused-imports': unusedImportsPlugin,
+      '@typescript-eslint': eslintPluginTs,
     },
     rules: {
       'no-undef': 'error',
       'no-console': 'warn',
-      '@next/next/no-html-link-for-pages': 'off',
-      'unused-imports/no-unused-imports': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
       'import/order': [
         'warn',
         {
@@ -60,10 +60,19 @@ const eslintConfig = [
           'newlines-between': 'always',
         },
       ],
+      'unused-imports/no-unused-imports': 'warn',
       'unused-imports/no-unused-vars': [
         'warn',
-        { vars: 'all', varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
       ],
+      '@next/next/no-html-link-for-pages': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_' },
