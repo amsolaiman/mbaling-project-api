@@ -72,6 +72,7 @@ const eslintConfig = [
       ],
       '@next/next/no-html-link-for-pages': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
