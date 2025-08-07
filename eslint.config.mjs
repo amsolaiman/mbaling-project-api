@@ -16,11 +16,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends(
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'eslint-config-prettier'
-  ),
+  ...compat.extends('eslint-config-prettier'),
   {
     ignores: ['**/node_modules/**', '**/out/*', '**/.next/*', 'next.config.js'],
   },
@@ -29,6 +25,7 @@ const eslintConfig = [
     languageOptions: {
       globals: {
         ...jestPlugin.environments.globals.globals,
+        process: 'readonly',
       },
       parser: eslintParserTs,
       parserOptions: {
@@ -49,14 +46,7 @@ const eslintConfig = [
       'import/order': [
         'warn',
         {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
           'newlines-between': 'always',
         },
       ],
