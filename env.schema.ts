@@ -9,9 +9,7 @@ export const envSchema = Yup.object({
 
 export const envClientSchema = Yup.object({
   // HOST
-  NEXT_PUBLIC_HOST_URL: Yup.string().required(
-    'NEXT_PUBLIC_HOST_URL is required'
-  ),
+  NEXT_PUBLIC_HOST_URL: Yup.string().required('NEXT_PUBLIC_HOST_URL is required'),
 });
 
 export type EnvSchemaType = Yup.InferType<typeof envSchema>;
@@ -27,17 +25,13 @@ export const validateEnv = (): EnvSchemaType => {
     }) as EnvSchemaType;
   } catch (error) {
     if (error instanceof Yup.ValidationError) {
-      throw new Error(
-        `Environment variable validation failed: ${error.errors.join(', ')}`
-      );
+      throw new Error(`Environment variable validation failed: ${error.errors.join(', ')}`);
     }
     throw error;
   }
 };
 
-export const validateEnvClient = (
-  env: Record<string, string>
-): EnvClientSchemaType => {
+export const validateEnvClient = (env: Record<string, string>): EnvClientSchemaType => {
   return envClientSchema.validateSync(env, { abortEarly: false });
 };
 

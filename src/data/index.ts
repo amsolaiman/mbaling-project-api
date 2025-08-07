@@ -1,13 +1,13 @@
-// types
-import { IUserItem } from '@/types/user';
-import { ILandlordDetail, IStudentDetail } from '@/types/detail';
-
 // students
 import studentUsersJson from './student-users.json';
 import studentDetailsJson from './student-details.json';
 // landlords
 import landlordUsersJson from './landlord-users.json';
 import landlordDetailsJson from './landlord-details.json';
+
+// types
+import { IUserItem } from '@/types/user';
+import { ILandlordDetail, IStudentDetail } from '@/types/detail';
 
 // ----------------------------------------------------------------------
 

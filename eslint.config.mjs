@@ -16,11 +16,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends(
-    'eslint-config-next',
-    'next/typescript',
-    'next/core-web-vitals'
-  ),
+  ...compat.extends('eslint-config-prettier'),
   {
     ignores: ['**/node_modules/**', '**/out/*', '**/.next/*', 'next.config.js'],
   },
@@ -29,6 +25,7 @@ const eslintConfig = [
     languageOptions: {
       globals: {
         ...jestPlugin.environments.globals.globals,
+        process: 'readonly',
       },
       parser: eslintParserTs,
       parserOptions: {
@@ -49,19 +46,15 @@ const eslintConfig = [
       'import/order': [
         'warn',
         {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
           'newlines-between': 'always',
         },
       ],
       'unused-imports/no-unused-imports': 'warn',
-      'unused-imports/no-unused-vars': [
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-unused-vars': [
         'warn',
         {
           vars: 'all',
@@ -69,14 +62,6 @@ const eslintConfig = [
           args: 'after-used',
           argsIgnorePattern: '^_',
         },
-      ],
-      '@next/next/no-html-link-for-pages': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_' },
       ],
     },
   },
