@@ -1,20 +1,20 @@
 import { NextResponse } from 'next/server';
 
+// route
 import { GET } from '@/app/route';
+// data
+import { studentUsers } from '@/data';
 
 // ----------------------------------------------------------------------
 
-// Mock environment variable for testing
-process.env.NEXT_PUBLIC_HOST_URL = 'http://localhost:3000';
-
 describe('GET /api', () => {
-  it("returns 'Hello world!' JSON response", async () => {
+  it('returns JSON response of Student users', async () => {
     const response = await GET();
 
     expect(response).toBeInstanceOf(NextResponse);
 
     const json = await response.json();
 
-    expect(json).toEqual({ message: 'Hello world! http://localhost:3000' });
+    expect(json).toEqual(studentUsers);
   });
 });
