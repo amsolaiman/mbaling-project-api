@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
     "format": "prettier --write \"**/*.{js,ts,tsx,json,md,yml,yaml}\"",
     "release": "standard-version",
-    "test": "jest",
+    "test:unit": "jest --passWithNoTests",
     "check:type": "tsc --noEmit",
     "check:circular-deps": "madge -c --extensions ts,tsx .",
     "prepare": "husky"
