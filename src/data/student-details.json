@@ -1,0 +1,212 @@
+[
+  {
+    "id": "e14d8b1c-66b1-4d8c-9b4e-5f6b7c4a9e8d",
+    "userId": "a3f9c7d1-7e0b-4cde-9b1e-3e47a589c2d7",
+    "studentId": "201812485",
+    "degree": "Bachelor of Science in Information Technology (Database Systems)",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "b8a7c6f8-19d8-4a35-a3f1-458b47cdd33f",
+    "userId": "4d56b5f0-591b-4a53-8397-98bdce8b7f83",
+    "studentId": "201869451",
+    "degree": "Bachelor of Science in Information Technology (Database Systems)",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "e6b38e2b-7d1e-4b6a-a7d8-cd0eec80d622",
+    "userId": "4dfd2c7c-d0fc-4cae-8685-30fc77e009d1",
+    "studentId": "201912054",
+    "degree": "Bachelor of Science in Civil Engineering",
+    "department": "Department of Civil Engineering",
+    "college": "College of Engineering",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "b2d8b226-12f9-4f53-b3a4-2f7d8b8e4b74",
+    "userId": "03e8aa47-7709-46ce-be81-0925314b96cc",
+    "studentId": "202004933",
+    "degree": "Bachelor of Arts in English Language Studies",
+    "department": "Department of English",
+    "college": "College of Social Sciences and Humanities",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "a6e937bb-3c8a-46f4-bf5e-5de1d0e6c33d",
+    "userId": "19e560c7-3f4f-4f16-b8e5-316cf5625d5d",
+    "studentId": "202085395",
+    "degree": "Bachelor of Science in Biology",
+    "department": "Department of Biology",
+    "college": "College of Natural Sciences and Mathematics",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "3b0d9e53-5a4e-40f5-bddf-8e9d8f14d1d3",
+    "userId": "a8967695-a94e-45ef-bf10-f5a705cdcd07",
+    "studentId": "201873009",
+    "degree": "Bachelor of Science in Information Systems",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "15a63a5c-7a72-4d90-9d29-063b7e8e0e46",
+    "userId": "78ce89f9-9dbf-4d74-9f41-6f0637f307c7",
+    "studentId": "201817422",
+    "degree": "Bachelor of Science in Electronics Engineering",
+    "department": "Department of Electrical and Electronics Engineering",
+    "college": "College of Engineering",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "4e25d8a2-1f77-4c6e-85c4-3e8d5967d182",
+    "userId": "ccf74e5f-2981-4ee5-9621-7bf98cbbb055",
+    "studentId": "202104836",
+    "degree": "Bachelor of Science in Computer Science",
+    "department": "Department of Computing Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "adf97207-df1f-40b6-8966-817e3c9e1a1a",
+    "userId": "03b78eb7-03e0-403c-a342-615f864878c1",
+    "studentId": "201877288",
+    "degree": "Bachelor of Science in Accountancy",
+    "department": "Department of Accountancy",
+    "college": "College of Business Administration and Accountancy",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "cc42b04c-19d8-4f95-b60b-087d6b2d4a6f",
+    "userId": "dc92b2da-35f0-4cd1-b586-4db759f87d52",
+    "studentId": "201900517",
+    "degree": "Bachelor of Science in Business Accountancy (Economics)",
+    "department": "Department of Economics",
+    "college": "College of Business Administration and Accountancy",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "74e5a735-f3e0-4d59-a62b-9c7f58d637b5",
+    "userId": "779fc382-49d2-4ad3-9e89-014162171f64",
+    "studentId": "202094735",
+    "degree": "Bachelor of Science in Information Technology (Database Systems)",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "3f4b5a5c-20bb-4bfc-bd5d-71b3f7c71c4b",
+    "userId": "4b4ac31e-8313-4646-a36f-c58892b03359",
+    "studentId": "202195388",
+    "degree": "Bachelor of Science in Information Systems",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "ebd2d542-2d9d-4a4f-a3b8-3a27d295d91e",
+    "userId": "ef21eca0-15f5-4b80-bfab-e4b59ac01e04",
+    "studentId": "201909485",
+    "degree": "Bachelor of Science in Biology",
+    "department": "Department of Biology",
+    "college": "College of Natural Sciences and Mathematics",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "9b8c8e0d-38c4-4c65-8d51-6a39f7e4ed77",
+    "userId": "abbd191e-49fd-4025-9965-e6f90acf0e9b",
+    "studentId": "201909490",
+    "degree": "Bachelor of Science in Mathematics",
+    "department": "Department of Mathematics",
+    "college": "College of Natural Sciences and Mathematics",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "27d8b2e4-5a2d-4f48-a028-2d2d7e7458de",
+    "userId": "30b39d5f-a7e4-49f3-90ff-175d430d8924",
+    "studentId": "201895388",
+    "degree": "Bachelor of Arts in Psychology",
+    "department": "Department of Psychology",
+    "college": "College of Social Sciences and Humanities",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "b2a1d5c4-8a7e-466b-94b8-4e8b5e2c876a",
+    "userId": "677fc107-f1c3-4b4a-a44e-a42f028a7b08",
+    "studentId": "201702995",
+    "degree": "Bachelor in Public Administration",
+    "department": "Department of Public Administration",
+    "college": "College of Public Affairs",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "3e73f1c4-19d2-4efb-a1f8-c9d5b230c6a7",
+    "userId": "7ad3e442-b811-4151-93a7-53607eaff9bb",
+    "studentId": "201942754",
+    "degree": "Bachelor of Science in Accountancy",
+    "department": "Department of Accountancy",
+    "college": "College of Business Administration and Accountancy",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "a84f5d53-d0b4-4e1d-bcb6-0a1f23fcfa6d",
+    "userId": "bbb874de-7911-423c-9207-23752babeeea",
+    "studentId": "201800145",
+    "degree": "Bachelor of Science in Information Technology (Network Systems)",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "c4a2e6f7-7d8c-4b11-9e0f-1b8c4b2f4e56",
+    "userId": "797118a4-478a-4b9a-8b0d-94aa8ea18123",
+    "studentId": "201983654",
+    "degree": "Bachelor of Science in Information Technology (Network Systems)",
+    "department": "Department of Information Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "d3c5fdb8-8e37-4b5e-8e5b-1c5b23e8d6a5",
+    "userId": "7e332e9c-e857-4480-bfdc-9f4610b4fc28",
+    "studentId": "202106466",
+    "degree": "Bachelor of Science in Computer Science",
+    "department": "Department of Computing Sciences",
+    "college": "College of Information and Computing Sciences",
+    "housingId": null,
+    "applicationId": null
+  },
+  {
+    "id": "1d9d5b7a-1c1f-4c53-a8b2-8e8e4e0d6f23",
+    "userId": "cecba951-5375-4360-80b5-4e629a2e239f",
+    "studentId": "201874900",
+    "degree": "Bachelor of Science in Civil Engineering",
+    "department": "Department of Civil Engineering",
+    "college": "College of Engineering",
+    "housingId": null,
+    "applicationId": null
+  }
+]
