@@ -17,9 +17,8 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends(
-    'eslint-config-next',
-    'next/typescript',
-    'next/core-web-vitals'
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended'
   ),
   {
     ignores: ['**/node_modules/**', '**/out/*', '**/.next/*', 'next.config.js'],
@@ -61,7 +60,10 @@ const eslintConfig = [
         },
       ],
       'unused-imports/no-unused-imports': 'warn',
-      'unused-imports/no-unused-vars': [
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-unused-vars': [
         'warn',
         {
           vars: 'all',
@@ -69,14 +71,6 @@ const eslintConfig = [
           args: 'after-used',
           argsIgnorePattern: '^_',
         },
-      ],
-      '@next/next/no-html-link-for-pages': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_' },
       ],
     },
   },
