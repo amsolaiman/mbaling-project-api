@@ -18,7 +18,8 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends(
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'eslint-config-prettier'
   ),
   {
     ignores: ['**/node_modules/**', '**/out/*', '**/.next/*', 'next.config.js'],
