@@ -41,7 +41,7 @@ export async function GET(requst: NextRequest) {
   //#endregion
 
   //#region Paginating data
-  let paginated: UserLandlordResponse[] = result;
+  let paginatedResult: UserLandlordResponse[] = result;
 
   const page = pageParam ? parseInt(pageParam, 10) : 1;
 
@@ -58,17 +58,17 @@ export async function GET(requst: NextRequest) {
   const startIndex = (page - 1) * limit;
   const endIndex = startIndex + limit;
 
-  paginated = result.slice(startIndex, endIndex);
+  paginatedResult = result.slice(startIndex, endIndex);
   //#endregion
 
-  if (!paginated.length) {
+  if (!paginatedResult.length) {
     return NextResponse.json({ message: 'No results found.' }, { status: 404 });
   }
 
   const response: ResponseProps = {
-    data: paginated,
+    data: paginatedResult,
     meta: {
-      totalFetched: paginated.length,
+      totalFetched: paginatedResult.length,
       totalOverall: result.length,
     },
     params: {
