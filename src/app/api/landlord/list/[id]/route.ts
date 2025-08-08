@@ -19,13 +19,11 @@ export async function GET(_request: NextRequest, { params }: { params: Promise<{
 
   const detail = landlordDetails.find((_d) => _d.userId === userById.id) || ({} as ILandlordDetail);
 
-  const { password, ...user } = userById;
-
-  const { userId, ...details } = detail;
+  const { password, ...user } = userById; // Exclude `password` from the response
 
   const result: UserLandlordResponse = {
     ...user,
-    details,
+    details: (({ userId, ...rest }) => rest)(detail), // Exclude `userId` from the response
   };
 
   return NextResponse.json(result, { status: 200 });

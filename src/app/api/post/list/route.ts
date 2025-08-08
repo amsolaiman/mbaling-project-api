@@ -33,10 +33,10 @@ export async function GET(request: NextRequest) {
 
     return {
       ..._p,
-      housingId: undefined, // Exclude housingId from the response
+      housingId: undefined, // Exclude `housingId` from the response
       uploads: uploads.map((_u) => ({
         ..._u,
-        postId: undefined, // Exclude postId from the response
+        postId: undefined, // Exclude `postId` from the response
       })),
       createdBy: isWithUser
         ? {

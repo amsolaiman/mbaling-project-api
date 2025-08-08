@@ -13,7 +13,6 @@ interface ResponseProps extends IResponse {
   data: UserStudentResponse[];
 }
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export async function GET(requst: NextRequest) {
   const { searchParams } = requst.nextUrl;
 
@@ -32,11 +31,15 @@ export async function GET(requst: NextRequest) {
   let result: UserStudentResponse[] = studentUsers.map((_u) => {
     const detail = studentDetails.find((_d) => _d.userId === _u.id) || ({} as IStudentDetail);
 
-    const { password, ...user } = _u;
-
-    const { id, userId, ...details } = detail;
-
-    return { ...user, details };
+    return {
+      ..._u,
+      password: undefined, // Exclude `password` from the response
+      details: {
+        ...detail,
+        id: undefined, // Exclude `id` from the response
+        userId: undefined, // Exclude `userId` from the response
+      },
+    };
   });
   //#endregion
 
