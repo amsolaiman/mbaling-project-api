@@ -9,6 +9,7 @@ import { IUploadItem, PostResponse } from '@/types/post';
 
 // ----------------------------------------------------------------------
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
 
@@ -32,16 +33,14 @@ export async function GET(request: NextRequest) {
     const uploads = postUploads.filter((_u) => _u.postId === _p.id) || ([] as IUploadItem[]);
 
     return {
-      ..._p,
-      housingId: undefined, // Exclude `housingId` from the response
+      ...(({ housingId, ...rest }) => rest)(_p), // Exclude `housingId` from the response
       uploads: uploads.map((_u) => ({
-        ..._u,
-        postId: undefined, // Exclude `postId` from the response
+        ...(({ postId, ...rest }) => rest)(_u), // Exclude `postId` from the response
       })),
       createdBy: isWithUser
         ? {
-            ...user,
-            details: detail,
+            ...(({ password, ...rest }) => rest)(user), // Exclude `password` from the response
+            details: (({ userId, ...rest }) => rest)(detail), // Exclude `userId` from the response
           }
         : undefined, // Include landlord details if createdBy is true
     };
