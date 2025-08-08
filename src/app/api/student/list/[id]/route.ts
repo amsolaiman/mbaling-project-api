@@ -17,12 +17,11 @@ export async function GET(_request: NextRequest, { params }: { params: Promise<{
     return NextResponse.json({ message: 'User not found.' }, { status: 404 });
   }
 
-  const userDetails =
-    studentDetails.find((_d) => _d.userId === userById.id) || ({} as IStudentDetail);
+  const detail = studentDetails.find((_d) => _d.userId === userById.id) || ({} as IStudentDetail);
 
   const { password, ...user } = userById;
 
-  const { id: detailId, userId, ...details } = userDetails;
+  const { id: detailId, userId, ...details } = detail;
 
   const result: UserStudentResponse = {
     ...user,
