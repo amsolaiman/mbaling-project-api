@@ -13,7 +13,6 @@ interface ResponseProps extends IResponse {
   data: UserLandlordResponse[];
 }
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export async function GET(requst: NextRequest) {
   const { searchParams } = requst.nextUrl;
 
@@ -32,11 +31,14 @@ export async function GET(requst: NextRequest) {
   let result: UserLandlordResponse[] = landlordUsers.map((_u) => {
     const detail = landlordDetails.find((_d) => _d.userId === _u.id) || ({} as ILandlordDetail);
 
-    const { password, ...users } = _u;
-
-    const { userId, ...details } = detail;
-
-    return { ...users, details };
+    return {
+      ..._u,
+      password: undefined, // Exclude `password` from the response
+      details: {
+        ...detail,
+        userId: undefined, // Exclude `userId` from the response
+      },
+    };
   });
   //#endregion
 
