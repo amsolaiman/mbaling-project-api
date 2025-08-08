@@ -10,6 +10,7 @@ import postUploadsJson from './post-uploads.json';
 
 // types
 import { IUserItem } from '@/types/user';
+import { IPostItem, IUploadItem } from '@/types/post';
 import { ILandlordDetail, IStudentDetail } from '@/types/detail';
 
 // ----------------------------------------------------------------------
@@ -28,9 +29,9 @@ export const landlordUsers = landlordUsersJson.map((user) => ({
 
 export const landlordDetails = landlordDetailsJson as Array<ILandlordDetail>;
 
-export const postList = postListJson;
+export const postList = postListJson as Array<IPostItem>;
 
 export const postUploads = postUploadsJson.map((upload) => ({
   ...upload,
   imageUrl: `${process.env.NEXT_PUBLIC_HOST_URL}${upload.imgUrl}`,
-}));
+})) as Array<IUploadItem>;
