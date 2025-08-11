@@ -30,5 +30,5 @@ export async function POST(request: NextRequest) {
 
   const accessToken = generateAccessToken(user);
 
-  return NextResponse.json({ message: 'Login successful.', accessToken, user }, { status: 200 });
+  return NextResponse.json({ message: 'Login successful.', accessToken }, { status: 200 });
 }
