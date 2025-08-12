@@ -1,6 +1,6 @@
 {
   "name": "mbaling-project-api",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
@@ -9,11 +9,13 @@
     "lint": "eslint --ext .ts,.tsx .",
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
     "format": "prettier --write \"**/*.{js,ts,tsx,json,md,yml,yaml}\"",
-    "release": "standard-version",
     "test:unit": "jest --passWithNoTests",
     "check:type": "tsc --noEmit",
     "check:circular-deps": "madge -c --extensions ts,tsx .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release:patch": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
