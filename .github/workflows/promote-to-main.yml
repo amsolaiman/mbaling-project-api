@@ -5,7 +5,7 @@ on:
 
 jobs:
   promote-to-main:
-    name: "Promote to main branch"
+    name: 'Promote to main branch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
