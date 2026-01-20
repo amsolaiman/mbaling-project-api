@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
-import { GET } from "@/app/route";
+import { GET } from '@/app/route';
 
-describe("GET /api", () => {
+describe('GET /api', () => {
   it("returns 'Hello world!' JSON response", async () => {
     const response = await GET();
 
@@ -10,6 +10,6 @@ describe("GET /api", () => {
 
     const json = await response.json();
 
-    expect(json).toEqual({ message: "Hello world!" });
+    expect(json).toEqual({ message: 'Hello world!' });
   });
 });
