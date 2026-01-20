@@ -34,3 +34,8 @@ jobs:
         run: pnpm lint
         env:
           NODE_ENV: test
+
+      - name: Run Jest unit tests
+        run: pnpm test
+        env:
+          NODE_ENV: test
