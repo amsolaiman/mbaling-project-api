@@ -11,6 +11,7 @@
     "format": "prettier --write \"**/*.{js,ts,tsx,json,md,yml,yaml}\"",
     "test": "jest",
     "check:type": "tsc --noEmit",
+    "check:circular-deps": "madge -c --extensions ts,tsx .",
     "prepare": "husky"
   },
   "dependencies": {
@@ -37,6 +38,7 @@
     "husky": "^9.1.7",
     "jest": "^30.2.0",
     "lint-staged": "^16.2.7",
+    "madge": "^8.0.0",
     "prettier": "^3.8.0",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
