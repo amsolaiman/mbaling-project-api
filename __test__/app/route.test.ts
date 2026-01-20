@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 
-import { GET } from '@/app/route';
+import { GET } from '../../src/app/route';
+
+// Mock environment variable for testing
+process.env.NEXT_PUBLIC_HOST_URL = 'http://localhost:3000';
 
 describe('GET /api', () => {
   it("returns 'Hello world!' JSON response", async () => {
@@ -10,6 +13,6 @@ describe('GET /api', () => {
 
     const json = await response.json();
 
-    expect(json).toEqual({ message: 'Hello world!' });
+    expect(json).toEqual({ message: 'Hello world! http://localhost:3000' });
   });
 });
