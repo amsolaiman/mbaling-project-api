@@ -12,7 +12,10 @@
     "test": "jest",
     "check:type": "tsc --noEmit",
     "check:circular-deps": "madge -c --extensions ts,tsx .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release:patch": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "dependencies": {
     "next": "16.0.10",
@@ -40,6 +43,7 @@
     "lint-staged": "^16.2.7",
     "madge": "^8.0.0",
     "prettier": "^3.8.0",
+    "standard-version": "^9.5.0",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript": "^5"
