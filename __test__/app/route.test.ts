@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { GET } from '../../src/app/route';
+import { GET } from '@/app/route';
 
 // Mock environment variable for testing
 process.env.NEXT_PUBLIC_HOST_URL = 'http://localhost:3000';
