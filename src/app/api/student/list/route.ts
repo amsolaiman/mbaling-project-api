@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// utils
+import { omit } from '@/utils/object';
 // data
 import { studentUsers, studentDetails } from '@/data';
 // types
@@ -13,7 +15,6 @@ interface ResponseProps extends IResponse {
   data: UserStudentResponse[];
 }
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export async function GET(requst: NextRequest) {
   const { searchParams } = requst.nextUrl;
 
@@ -34,18 +35,10 @@ export async function GET(requst: NextRequest) {
       studentDetails.find((detail) => detail.userId === user.id) ||
       ({} as IStudentDetail);
 
-    const {
-      password: _password, // password is omitted from response
-      ...users
-    } = user;
-
-    const {
-      id: _id, // id is omitted from response
-      userId: _userId, // userId is omitted from response
-      ...details
-    } = detail;
-
-    return { ...users, details };
+    return {
+      ...omit(user, ['password']),
+      details: omit(detail, ['id', 'userId']),
+    };
   });
   //#endregion
 
