@@ -1,0 +1,93 @@
+[
+  {
+    "id": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
+    "userId": "f5b2a8d5-9e7c-4bfa-bb99-88c1e9c458d3",
+    "housingName": "Gania's Boarding House",
+    "chatLink": "https://m.me/gania_boarding",
+    "mapLink": null
+  },
+  {
+    "id": "02c78542-0f07-4268-ac73-29b29e512eb1",
+    "userId": "aad5d657-3ecb-4c4e-b56e-60c0845f92a5",
+    "housingName": "Mamintal Rental Cottages",
+    "chatLink": "https://m.me/abdullah_mamintal",
+    "mapLink": null
+  },
+  {
+    "id": "86f3e57a-dedc-4ec4-a187-1bb21fc5372d",
+    "userId": "8a91c5f4-15f3-44ef-a6b2-fbdb7634c7f7",
+    "housingName": "River View Rentals",
+    "chatLink": "https://m.me/josemagsaysay",
+    "mapLink": "https://maps.app.goo.gl/5H53saDLPCp3pMq89"
+  },
+  {
+    "id": "6801bf65-129d-4944-8510-912c90bdf0c2",
+    "userId": "f1b2c3d4-5678-9101-1121-3141f5g6h7i8",
+    "housingName": "Heidyo-Vasquez Apartments",
+    "chatLink": null,
+    "mapLink": "https://maps.app.goo.gl/Yv9XRs18b7JbDk9g9"
+  },
+  {
+    "id": "db01c126-813e-47f3-bf15-fd1b266628dd",
+    "userId": "d5a45f30-4c2e-42ad-9b91-69a4d508cf8a",
+    "housingName": "Cozy Corner Boarding House",
+    "chatLink": "https://m.me/aminatorress",
+    "mapLink": "https://maps.app.goo.gl/XHdfMDZep4rwaey67"
+  },
+  {
+    "id": "d9634971-4261-4f2d-bf44-aa18eb5b4668",
+    "userId": "h7i8j9k0-1121-3141-5161-7181i9j0k1l2",
+    "housingName": "Super-Breeze Rental Houses",
+    "chatLink": null,
+    "mapLink": null
+  },
+  {
+    "id": "b0555c89-35ee-428f-a429-08949de787b8",
+    "userId": "b9f9e3a6-0f8b-4f62-a33d-4c7b9675e0a1",
+    "housingName": "Aguilar's Cottages",
+    "chatLink": "https://m.me/aguilar_cottage",
+    "mapLink": null
+  },
+  {
+    "id": "ec669147-5c0c-4ed3-a5d0-0fc68212a589",
+    "userId": "b5a90e3a-c8f0-47d7-829c-f0e70a5485a8",
+    "housingName": "Urban Nest Bed-Spacer",
+    "chatLink": "https://m.me/castro.bedspace",
+    "mapLink": "https://maps.app.goo.gl/Wm7XXDcuoM8BmJxC7"
+  },
+  {
+    "id": "6d699c5b-2247-47e4-8e8a-3e543ac7ceb9",
+    "userId": "j0k1l2m3-1121-3141-5161-7181i9j0k1l2",
+    "housingName": "Serenity Apartments",
+    "chatLink": "https://m.me/fatima.umpa",
+    "mapLink": null
+  },
+  {
+    "id": "ad749d3d-9d93-4d29-90b3-f3d135810699",
+    "userId": "c3a87fa4-51e8-4f5f-9a7f-e19e92bf5e9a",
+    "housingName": "The Abubakar Cottages",
+    "chatLink": null,
+    "mapLink": "https://maps.app.goo.gl/dmFJdWwwQ48YhYnN9"
+  },
+  {
+    "id": "d24ccd66-7e48-4f5e-91f3-f068395a5d99",
+    "userId": "e45f6b3d-9649-43d2-890e-03b74fa6c4cd",
+    "housingName": "Hadji Ali's Boarding House",
+    "chatLink": "https://m.me/ali.boarding",
+    "mapLink": "https://maps.app.goo.gl/yPbi6QzmeSecokyN8"
+  },
+  {
+    "id": "edf4b958-81a7-4037-9332-6cf430982736",
+    "userId": "g5h6i7j8-1234-5678-9101-11213141516l",
+    "housingName": "Campus-side Bungalows",
+    "chatLink": null,
+    "mapLink": null
+  },
+  {
+    "id": "3d4c3ec4-fee7-41c2-bb08-e0b073f6e770",
+    "userId": "d67b7b13-731e-4ccf-9b45-cf0c38a1b6b7",
+    "housingName": "MSU Central Flats",
+    "chatLink": "https://m.me/macarambon_central",
+    "mapLink": null
+  }
+]
