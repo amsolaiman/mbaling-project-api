@@ -1,5 +1,5 @@
 {
-  "conventionalCommits.scopes": ["config", "env", "asset"],
+  "conventionalCommits.scopes": ["config", "env", "asset", "data"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

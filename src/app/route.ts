@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
 
+import { studentUsers as users } from '@/data';
+
+// ----------------------------------------------------------------------
+
 export async function GET() {
-  return NextResponse.json({
-    message: `Hello world! ${process.env.NEXT_PUBLIC_HOST_URL}`,
+  return NextResponse.json(users, {
+    status: 200,
   });
 }
