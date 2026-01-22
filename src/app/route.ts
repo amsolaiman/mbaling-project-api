@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { studentUsers as users } from '@/data';
+import { landlordUsers as users } from '@/data';
 
 // ----------------------------------------------------------------------
 
