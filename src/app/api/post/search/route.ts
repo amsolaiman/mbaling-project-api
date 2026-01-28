@@ -53,16 +53,6 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  if (withUserParam && !isWithUser) {
-    return NextResponse.json(
-      {
-        message:
-          'Invalid query parameter. Use "createdBy=true" to include landlord details.',
-      },
-      { status: 400 }
-    );
-  }
-
   const filteredPosts = queryParam
     ? postList.filter((post) => post.title.toLowerCase().includes(queryParam))
     : postList;
