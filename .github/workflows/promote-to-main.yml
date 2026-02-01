@@ -1,0 +1,26 @@
+name: Promote to Main
+
+on:
+  workflow_dispatch:
+
+jobs:
+  promote-to-main:
+    name: Promote to main branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: dev
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Merge dev into main branch
+      - name: Merge fast-forward
+        uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
+        with:
+          branchtomerge: dev
+          branch: main
+          token: ${{ secrets.GITHUB_TOKEN }}
