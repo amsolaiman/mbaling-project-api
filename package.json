@@ -31,6 +31,7 @@
     "eslint-config-next": "16.0.10",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "standard-version": "^9.5.0",
     "ts-jest": "^29.4.6",
