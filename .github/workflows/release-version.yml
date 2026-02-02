@@ -1,4 +1,4 @@
-name: "Release Version"
+name: 'Release Version'
 
 on:
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.7.0
-          cache: "pnpm"
+          cache: 'pnpm'
 
       # Install dependencies
       - name: Install dependencies
