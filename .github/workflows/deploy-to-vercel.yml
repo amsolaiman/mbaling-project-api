@@ -7,7 +7,7 @@ on:
         description: Select the environment
         required: true
         type: choice
-        options: [dev, prod]
+        options: [dev, uat, prod]
 
 jobs:
   deploy:
@@ -38,5 +38,6 @@ jobs:
           if [[ "$ENV" == "prod" ]]; then
             vercel deploy --prod --force --token ${{ secrets.VERCEL_ACCESS_TOKEN }}
           else
+            # For dev and uat, deploy to the corresponding Vercel branch
             vercel deploy --force --token ${{ secrets.VERCEL_ACCESS_TOKEN }}
           fi
