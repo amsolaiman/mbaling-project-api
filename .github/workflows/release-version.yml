@@ -1,0 +1,82 @@
+name: "Release Version"
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: Select release type
+        required: true
+        type: choice
+        options: [patch, minor, major]
+
+jobs:
+  release:
+    name: Create version release
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Ensure release is on main
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "❌ Release workflow must be run on the main branch"
+            exit 1
+          fi
+
+      # Install pnpm first, so it's available for Node.js setup
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10.3.0
+
+      # Install Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.7.0
+          cache: "pnpm"
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Run version release
+      - name: Configure Git user
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Run release script
+        run: |
+          echo "🚀 Running release: ${{ inputs.release_type }}"
+          pnpm release:${{ inputs.release_type }}
+
+      - name: Push changes and tags to main
+        run: git push --follow-tags origin main
+
+      - name: Get version
+        id: get-version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get-version.outputs.version }}
+          name: Release v${{ steps.get-version.outputs.version }}
+          body_path: CHANGELOG.md
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      # Merge main into dev branch
+      - name: Merge fast-forward
+        uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
+        with:
+          branchtomerge: main
+          branch: dev
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
