@@ -1,11 +1,11 @@
-name: Promote to Main
+name: Promote DEV to UAT
 
 on:
   workflow_dispatch:
 
 jobs:
-  promote-to-main:
-    name: Promote to main branch
+  promote-to-uat:
+    name: Promote dev to UAT branch
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -22,5 +22,6 @@ jobs:
         uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
         with:
           branchtomerge: dev
-          branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: uat
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
