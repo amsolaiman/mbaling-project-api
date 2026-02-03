@@ -1,7 +1,6 @@
 import { NextRequest } from 'next/server';
 
 import { GET } from '@/app/api/student/list/route';
-
 // utils
 import { omit } from '@/utils/object';
 // data

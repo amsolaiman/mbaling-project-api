@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // utils
 import { omit } from '@/utils/object';
-
 // data
 import { studentUsers, studentDetails } from '@/data';
 // types
