@@ -1,11 +1,13 @@
 import { NextRequest } from 'next/server';
 
 import { GET } from '@/app/api/student/list/route';
+// utils
+import { omit } from '@/utils/object';
+// data
 import { studentDetails, studentUsers } from '@/data';
 
 // ----------------------------------------------------------------------
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 describe('GET /api/student/list', () => {
   it('returns paginated Student list for limit=3 & page=5', async () => {
     const url = 'http://localhost:3000/api/student/list?limit=3&page=5';
@@ -31,16 +33,13 @@ describe('GET /api/student/list', () => {
 
     expect(body.data).toEqual(
       studentUsers.slice(12, 15).map((user) => {
-        const { password: _password, ...users } = user;
-
-        const detail = studentDetails.find(
-          (detail) => detail.userId === user.id
-        );
-        const { id: _id, userId: _userId, ...details } = detail!;
+        const detail =
+          studentDetails.find((detail) => detail.userId === user.id) ||
+          ({} as (typeof studentDetails)[number]);
 
         return {
-          ...users,
-          details,
+          ...omit(user, ['password']),
+          details: omit(detail, ['id', 'userId']),
         };
       })
     );
