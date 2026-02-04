@@ -79,4 +79,5 @@ jobs:
         with:
           branchtomerge: main
           branch: dev
-          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
