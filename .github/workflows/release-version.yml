@@ -74,6 +74,11 @@ jobs:
           token: ${{ secrets.GIT_ACCESS_TOKEN }}
 
       # Merge main into dev branch
+      - name: Clean working tree
+        run: |
+          git reset --hard
+          git clean -fd
+
       - name: Merge fast-forward
         uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
         with:
