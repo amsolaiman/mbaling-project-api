@@ -1,4 +1,4 @@
-import { IStudentDetail } from './detail';
+import { ILandlordDetail, IStudentDetail } from './detail';
 
 // ----------------------------------------------------------------------
 
@@ -27,6 +27,10 @@ export interface IUserItem {
   updatedBy: string | null;
   deletedAt: Date | string | null;
   deletedBy: string | null;
+}
+
+export interface UserLandlordResponse extends Omit<IUserItem, 'password'> {
+  details: Omit<ILandlordDetail, 'userId'>;
 }
 
 export interface UserStudentResponse extends Omit<IUserItem, 'password'> {
