@@ -33,5 +33,5 @@ export const postList = postListJson as Array<IPostItem>;
 
 export const postUploads = postUploadsJson.map((upload) => ({
   ...upload,
-  imageUrl: `${process.env.NEXT_PUBLIC_HOST_URL}${upload.imgUrl}`,
+  imgUrl: `${process.env.NEXT_PUBLIC_HOST_URL}${upload.imgUrl}`,
 })) as Array<IUploadItem>;
