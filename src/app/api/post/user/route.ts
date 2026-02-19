@@ -30,11 +30,11 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const queryParam = searchParams.get('query')?.toLowerCase();
+  const queryParam = searchParams.get('id');
 
   if (queryParam && !queryParam.trim()) {
     return NextResponse.json(
-      { message: 'Query parameter cannot be empty.' },
+      { message: 'ID parameter cannot be empty.' },
       { status: 400 }
     );
   }
@@ -53,9 +53,17 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const filteredPosts = queryParam
-    ? postList.filter((post) => post.title.toLowerCase().includes(queryParam))
-    : postList;
+  const housing: ILandlordDetail | undefined = landlordDetails.find(
+    (detail: ILandlordDetail) => detail.userId === queryParam
+  );
+
+  if (!housing) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
+
+  const filteredPosts = postList.filter(
+    (post) => post.housingId === housing.id
+  );
 
   //#region Fetching data
   const result: PostResponse[] = filteredPosts.map((post) => {
