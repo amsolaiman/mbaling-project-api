@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.1.0...v0.2.0) (2026-02-20)
+
+### Features
+
+- add post details api route ([#30](https://github.com/amsolaiman/mbaling-project-api/issues/30)) ([93471b6](https://github.com/amsolaiman/mbaling-project-api/commit/93471b6e4aacf6025fd193c5fa51c2a507cc5afb))
+- add post list api route ([#29](https://github.com/amsolaiman/mbaling-project-api/issues/29)) ([42dfb8f](https://github.com/amsolaiman/mbaling-project-api/commit/42dfb8f2a3c773db284d09989ee3afd29de62281))
+- add post list by users api route ([#32](https://github.com/amsolaiman/mbaling-project-api/issues/32)) ([3c167dd](https://github.com/amsolaiman/mbaling-project-api/commit/3c167ddfed061535361dc0ea44f508dbf279dbd2))
+- add post list data & types ([#28](https://github.com/amsolaiman/mbaling-project-api/issues/28)) ([212e6d5](https://github.com/amsolaiman/mbaling-project-api/commit/212e6d5293e403e253964c0787d73f524881be6a))
+- add post upload images ([#27](https://github.com/amsolaiman/mbaling-project-api/issues/27)) ([d16bf76](https://github.com/amsolaiman/mbaling-project-api/commit/d16bf768af3bc0cb02c178727b2bf348b2705f5a))
+- add search post api route ([#31](https://github.com/amsolaiman/mbaling-project-api/issues/31)) ([20cf352](https://github.com/amsolaiman/mbaling-project-api/commit/20cf35216cf31e9ab59131dc6478856629912033))
+- display post api routes to landing page ([#33](https://github.com/amsolaiman/mbaling-project-api/issues/33)) ([a7bc3b3](https://github.com/amsolaiman/mbaling-project-api/commit/a7bc3b39708e2991b258ceaa96503efa763353d3))
+
 ## 0.1.0 (2026-02-04)
 
 ### Features
