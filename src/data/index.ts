@@ -3,6 +3,8 @@ import { IUserItem } from '@/types/user';
 import { IPostItem, IUploadItem } from '@/types/post';
 import { ILandlordDetail, IStudentDetail } from '@/types/detail';
 
+// admin
+import adminUsersJson from './admin-users.json';
 // students
 import studentUsersJson from './student-users.json';
 import studentDetailsJson from './student-details.json';
@@ -14,6 +16,11 @@ import postListJson from './post-list.json';
 import postUploadsJson from './post-uploads.json';
 
 // ----------------------------------------------------------------------
+
+export const adminUsers = adminUsersJson.map((user) => ({
+  ...user,
+  avatarUrl: `${process.env.NEXT_PUBLIC_HOST_URL}${user.avatarUrl}`,
+})) as Array<IUserItem>;
 
 export const landlordUsers = landlordUsersJson.map((user) => ({
   ...user,
