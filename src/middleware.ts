@@ -2,18 +2,34 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // ----------------------------------------------------------------------
 
+function withCors(response: NextResponse) {
+  response.headers.set('Access-Control-Allow-Origin', '*');
+  response.headers.set(
+    'Access-Control-Allow-Methods',
+    'GET,POST,PUT,DELETE,OPTIONS'
+  );
+  response.headers.set(
+    'Access-Control-Allow-Headers',
+    'Content-Type,Authorization'
+  );
+
+  return response;
+}
+
 function unauthorized() {
-  return new NextResponse('Authentication required', {
+  const response = new NextResponse('Authentication required', {
     status: 401,
     headers: {
       'WWW-Authenticate': 'Basic realm="Protected Area"',
     },
   });
+
+  return withCors(response);
 }
 
 export function middleware(request: NextRequest) {
   if (request.method === 'OPTIONS') {
-    return NextResponse.next();
+    return withCors(new NextResponse(null, { status: 200 }));
   }
 
   const username = process.env.BASIC_AUTH_USERNAME;
@@ -48,6 +64,7 @@ export const config = {
      * - Next.js internals
      * - static files
      */
+    '/api/:path*',
     '/((?!api|_next|.*\\..*).*)',
   ],
 };
