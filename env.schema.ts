@@ -12,6 +12,10 @@ export const envSchema = Yup.object({
     .oneOf(['true', 'false'])
     .default('false')
     .optional(),
+  // JWT TOKEN
+  JWT_SECRET_ACCESS_KEY: Yup.string().required(
+    'JWT_SECRET_ACCESS_KEY is required'
+  ),
 });
 
 export const envClientSchema = Yup.object({
