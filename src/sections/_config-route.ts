@@ -15,6 +15,23 @@ export interface RouteConfig {
 
 export const routeConfig: RouteConfig[] = [
   {
+    header: 'Auth',
+    children: [
+      {
+        title: 'Auth Me',
+        type: 'get',
+        caption: 'Get user info after login',
+        path: '/api/auth/me',
+      },
+      {
+        title: 'Auth Login',
+        type: 'post',
+        caption: 'Login',
+        path: '/api/auth/login',
+      },
+    ],
+  },
+  {
     header: 'Landlord',
     children: [
       {
