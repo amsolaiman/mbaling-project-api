@@ -4,14 +4,14 @@ import { NextRequest, NextResponse } from 'next/server';
 // utils
 import { generateAccessToken } from '@/utils/auth';
 // data
-import { landlordUsers, studentUsers } from '@/data';
+import { adminUsers, landlordUsers, studentUsers } from '@/data';
 
 // ----------------------------------------------------------------------
 
 export async function POST(request: NextRequest) {
   const { username, password } = await request.json();
 
-  const userList = [...landlordUsers, ...studentUsers];
+  const userList = [...adminUsers, ...landlordUsers, ...studentUsers];
 
   //#region Checking username
   const user = userList.find((user) => user.username === username);
