@@ -120,4 +120,27 @@ export const routeConfig: RouteConfig[] = [
       },
     ],
   },
+  {
+    header: 'Admin',
+    children: [
+      {
+        title: 'Admin List',
+        type: 'get',
+        caption: 'Get all admin users',
+        path: '/api/admin/list',
+      },
+      {
+        title: 'Admin Details',
+        type: 'get',
+        caption: 'Get admin details by id',
+        path: '/api/admin/list/<strong>:id</strong>',
+      },
+      {
+        title: 'Admin List Paginated',
+        type: 'get',
+        caption: 'Get list of admin users by pagination params',
+        path: '/api/admin/list?limit=<strong>{limit}</strong>&page=<strong>{page}</strong>',
+      },
+    ],
+  },
 ];
