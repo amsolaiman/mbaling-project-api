@@ -29,6 +29,8 @@ export interface IUserItem {
   deletedBy: string | null;
 }
 
+export type UserAdminResponse = Omit<IUserItem, 'password'>;
+
 export interface UserLandlordResponse extends Omit<IUserItem, 'password'> {
   details: Omit<ILandlordDetail, 'userId'>;
 }
