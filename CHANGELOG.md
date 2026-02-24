@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.2.0...v0.3.0) (2026-02-24)
+
+### Features
+
+- add admin details api route ([#40](https://github.com/amsolaiman/mbaling-project-api/issues/40)) ([2737f78](https://github.com/amsolaiman/mbaling-project-api/commit/2737f785f47f7bb517d0419ca2b7a184a16805c9))
+- add admin to auth api user list ([#39](https://github.com/amsolaiman/mbaling-project-api/issues/39)) ([d776456](https://github.com/amsolaiman/mbaling-project-api/commit/d776456a695bb197fd40f0e0521a0555ffda9110))
+- add admin user list api route ([#38](https://github.com/amsolaiman/mbaling-project-api/issues/38)) ([be18328](https://github.com/amsolaiman/mbaling-project-api/commit/be1832856e60840db5788e4b8dcd5a179b43b148))
+- add admin users data ([#37](https://github.com/amsolaiman/mbaling-project-api/issues/37)) ([b604614](https://github.com/amsolaiman/mbaling-project-api/commit/b6046140ae492f1441d8b1f697be2b9fa34cbefa))
+- add auth login function & api route ([#34](https://github.com/amsolaiman/mbaling-project-api/issues/34)) ([5d3f090](https://github.com/amsolaiman/mbaling-project-api/commit/5d3f09080eb0c089fd0f8ebbc81963a9f12f7080))
+- add auth me api route ([#35](https://github.com/amsolaiman/mbaling-project-api/issues/35)) ([f82bc8a](https://github.com/amsolaiman/mbaling-project-api/commit/f82bc8a2be5529ec154cd31e872e8b379d31a330))
+- display admin api routes to landing page ([#41](https://github.com/amsolaiman/mbaling-project-api/issues/41)) ([b4e8934](https://github.com/amsolaiman/mbaling-project-api/commit/b4e8934cbc9b5268b86382ccf80f102b4e837c56))
+- display auth api routes to landing page ([#36](https://github.com/amsolaiman/mbaling-project-api/issues/36)) ([e58ff9c](https://github.com/amsolaiman/mbaling-project-api/commit/e58ff9cd888de9066b7eccd3034dee70510c535c))
+
+### Documentations
+
+- update readme ([#42](https://github.com/amsolaiman/mbaling-project-api/issues/42)) ([466db88](https://github.com/amsolaiman/mbaling-project-api/commit/466db88fef3ac6d289af623b2484cd5d29ebf704))
+
 ## [0.2.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.1.0...v0.2.0) (2026-02-20)
 
 ### Features
