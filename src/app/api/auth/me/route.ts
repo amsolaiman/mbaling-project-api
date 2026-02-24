@@ -5,6 +5,7 @@ import { omit } from '@/utils/object';
 import { authenticateAccessToken } from '@/utils/auth';
 // data
 import {
+  adminUsers,
   landlordDetails,
   landlordUsers,
   studentDetails,
@@ -25,7 +26,7 @@ export async function GET(request: NextRequest) {
 
   const userAuth = auth as { id: string; email: string };
 
-  const userList = [...landlordUsers, ...studentUsers];
+  const userList = [...adminUsers, ...landlordUsers, ...studentUsers];
 
   //#region Checking user
   const foundUser = userList.find((user) => user.id === userAuth.id);
