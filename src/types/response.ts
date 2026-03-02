@@ -8,5 +8,7 @@ export interface IResponse {
   params: {
     page?: number;
     limit?: number;
+    sort?: string;
+    order?: string;
   };
 }
