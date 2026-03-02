@@ -13,6 +13,8 @@ import {
 import { IResponse } from '@/types/response';
 import { ILandlordDetail, IStudentDetail } from '@/types/detail';
 import { UserLandlordResponse, UserStudentResponse } from '@/types/user';
+// constants
+import { SEARCH_SORT_BY_DEFAULT, SearchOrderParams } from '@/constants/param';
 
 // ----------------------------------------------------------------------
 
@@ -29,9 +31,20 @@ export async function GET(requst: NextRequest) {
 
   const limitParam = searchParams.get('limit');
 
+  const sortParam = searchParams.get('sort');
+
+  const orderParam = searchParams.get('order') as SearchOrderParams | null;
+
   if (limitParam && !pageParam) {
     return NextResponse.json(
       { message: 'Page parameter is required when limit is provided.' },
+      { status: 400 }
+    );
+  }
+
+  if (orderParam && !Object.values(SearchOrderParams).includes(orderParam)) {
+    return NextResponse.json(
+      { error: 'Parameter `order` must be either `asc` or `desc`.' },
       { status: 400 }
     );
   }
@@ -79,6 +92,29 @@ export async function GET(requst: NextRequest) {
   });
   //#endregion
 
+  //#region Sorting data
+  const sort = sortParam || SEARCH_SORT_BY_DEFAULT;
+
+  const order = orderParam || SearchOrderParams.ASC;
+
+  result.sort((a, b) => {
+    const aValue = (a as unknown as Record<string, unknown>)[sort];
+    const bValue = (b as unknown as Record<string, unknown>)[sort];
+
+    if (!aValue || !bValue) return 0;
+
+    let comparison = 0;
+
+    if (typeof aValue === 'string' && typeof bValue === 'string') {
+      comparison = aValue.localeCompare(bValue);
+    } else {
+      comparison = aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
+    }
+
+    return order === SearchOrderParams.ASC ? comparison : -comparison;
+  });
+  //#endregion
+
   //#region Paginating data
   let paginated: UserArrayType = result;
 
@@ -119,6 +155,8 @@ export async function GET(requst: NextRequest) {
     params: {
       page,
       limit,
+      sort,
+      order,
     },
   };
 
