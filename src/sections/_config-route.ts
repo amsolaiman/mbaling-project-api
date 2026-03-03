@@ -178,6 +178,12 @@ export const routeConfig: RouteConfig[] = [
         path: '/api/admin/list/<strong>:id</strong>',
       },
       {
+        title: 'Admin List Sorted',
+        type: 'get',
+        caption: 'Get list of admin users by sorting params',
+        path: '/api/admin/list?sort=<strong>{sort}</strong>&order=<strong>{order}</strong>',
+      },
+      {
         title: 'Admin List Paginated',
         type: 'get',
         caption: 'Get list of admin users by pagination params',
