@@ -76,6 +76,12 @@ export const routeConfig: RouteConfig[] = [
         path: '/api/student/list/<strong>:id</strong>',
       },
       {
+        title: 'Student List Sorted',
+        type: 'get',
+        caption: 'Get list of student users by sorting params',
+        path: '/api/student/list?sort=<strong>{sort}</strong>&order=<strong>{order}</strong>',
+      },
+      {
         title: 'Student List Paginated',
         type: 'get',
         caption: 'Get list of student users by pagination params',
@@ -84,7 +90,7 @@ export const routeConfig: RouteConfig[] = [
     ],
   },
   {
-    header: 'mStudent & Landlord',
+    header: 'Student & Landlord',
     children: [
       {
         title: 'All Users List',
