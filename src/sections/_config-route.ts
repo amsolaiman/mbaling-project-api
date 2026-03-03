@@ -78,6 +78,36 @@ export const routeConfig: RouteConfig[] = [
     ],
   },
   {
+    header: 'mStudent & Landlord',
+    children: [
+      {
+        title: 'All Users List',
+        type: 'get',
+        caption: 'Get all users',
+        path: '/api/all/list',
+      },
+      {
+        title: 'All Users List Sorted',
+        type: 'get',
+        caption: 'Get list of users by sorting params',
+        path: '/api/all/list?sort=<strong>{sort}</strong>&order=<strong>{order}</strong>',
+      },
+      {
+        title: 'All Users List Paginated',
+        type: 'get',
+        caption: 'Get list of users by pagination params',
+        path: '/api/all/list?page=<strong>{page}</strong>&limit=<strong>{limit}</strong>',
+      },
+      {
+        title: 'All Users Search',
+        type: 'get',
+        caption: 'Search user',
+        path: '/api/all/search?query=<strong>{query}</strong>',
+        note: 'Parameters sort, order, page and limit can be applied',
+      },
+    ],
+  },
+  {
     header: 'Post',
     children: [
       {
