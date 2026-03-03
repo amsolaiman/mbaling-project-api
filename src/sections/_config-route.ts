@@ -47,6 +47,12 @@ export const routeConfig: RouteConfig[] = [
         path: '/api/landlord/list/<strong>:id</strong>',
       },
       {
+        title: 'Landlord List Sorted',
+        type: 'get',
+        caption: 'Get list of landlord users by sorting params',
+        path: '/api/landlord/list?sort=<strong>{sort}</strong>&order=<strong>{order}</strong>',
+      },
+      {
         title: 'Landlord List Paginated',
         type: 'get',
         caption: 'Get list of landlord users by pagination params',
