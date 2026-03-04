@@ -58,6 +58,13 @@ export const routeConfig: RouteConfig[] = [
         caption: 'Get list of landlord users by pagination params',
         path: '/api/landlord/list?limit=<strong>{limit}</strong>&page=<strong>{page}</strong>',
       },
+      {
+        title: 'Landlord Search',
+        type: 'get',
+        caption: 'Search landlord user',
+        path: '/api/landlord/search?query=<strong>{query}</strong>',
+        note: 'Parameters sort, order, page and limit can be applied',
+      },
     ],
   },
   {
@@ -86,6 +93,13 @@ export const routeConfig: RouteConfig[] = [
         type: 'get',
         caption: 'Get list of student users by pagination params',
         path: '/api/student/list?limit=<strong>{limit}</strong>&page=<strong>{page}</strong>',
+      },
+      {
+        title: 'Student Search',
+        type: 'get',
+        caption: 'Search student user',
+        path: '/api/student/search?query=<strong>{query}</strong>',
+        note: 'Parameters sort, order, page and limit can be applied',
       },
     ],
   },
