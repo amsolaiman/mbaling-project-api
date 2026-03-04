@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.3.0...v0.4.0) (2026-03-04)
+
+### Features
+
+- add all users list api route ([#43](https://github.com/amsolaiman/mbaling-project-api/issues/43)) ([c0aee4e](https://github.com/amsolaiman/mbaling-project-api/commit/c0aee4e4877e706019d6240f83b4f890dd665461))
+- add search all users api route ([#45](https://github.com/amsolaiman/mbaling-project-api/issues/45)) ([af3122c](https://github.com/amsolaiman/mbaling-project-api/commit/af3122c92de70c7246946eea78069b8a7c2c5e3b))
+- add search landlord users api route ([#51](https://github.com/amsolaiman/mbaling-project-api/issues/51)) ([cd6c643](https://github.com/amsolaiman/mbaling-project-api/commit/cd6c64373107e116f8ffc7af51a39ab9dcc46cbf))
+- add search student users api route ([#52](https://github.com/amsolaiman/mbaling-project-api/issues/52)) ([2033f93](https://github.com/amsolaiman/mbaling-project-api/commit/2033f936652cea78087b56bde6233d28725b24eb))
+- apply sorting params to all-users list & search ([#46](https://github.com/amsolaiman/mbaling-project-api/issues/46)) ([e754dfd](https://github.com/amsolaiman/mbaling-project-api/commit/e754dfd4505bcbaf41457bdfdaf64ee22eacf8fc))
+- apply sorting to admin list api ([#50](https://github.com/amsolaiman/mbaling-project-api/issues/50)) ([153d3ef](https://github.com/amsolaiman/mbaling-project-api/commit/153d3ef45879edf1f0f4774cb1cf46024aef14c3))
+- apply sorting to landlord list api ([#48](https://github.com/amsolaiman/mbaling-project-api/issues/48)) ([e294eda](https://github.com/amsolaiman/mbaling-project-api/commit/e294eda174004ae9650d7153fee9c9a7a7ed1778))
+- apply sorting to student list api ([#49](https://github.com/amsolaiman/mbaling-project-api/issues/49)) ([ae8af07](https://github.com/amsolaiman/mbaling-project-api/commit/ae8af0728a0fa88f583ad1ef11925add4f7ecaeb))
+- display all users api routes to landing page ([#47](https://github.com/amsolaiman/mbaling-project-api/issues/47)) ([1490a65](https://github.com/amsolaiman/mbaling-project-api/commit/1490a656861ba4061f5893cd1d31b9c56bb545ce))
+- display student & landlord search api routes to landing page ([#54](https://github.com/amsolaiman/mbaling-project-api/issues/54)) ([6b8dd5e](https://github.com/amsolaiman/mbaling-project-api/commit/6b8dd5e88f53b2638df4d1e87a0d7a23df800f98))
+
+### Bug Fixes
+
+- fix no query result error response on users search apis ([#53](https://github.com/amsolaiman/mbaling-project-api/issues/53)) ([22e0a09](https://github.com/amsolaiman/mbaling-project-api/commit/22e0a094a1c7263eb66e762289d95051446ddc98))
+
 ## [0.3.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.2.0...v0.3.0) (2026-02-24)
 
 ### Features
