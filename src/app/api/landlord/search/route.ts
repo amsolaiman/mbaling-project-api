@@ -20,6 +20,15 @@ interface ResponseProps extends IResponse {
 export async function GET(requst: NextRequest) {
   const { searchParams } = requst.nextUrl;
 
+  const queryParam = searchParams.get('query')?.toLowerCase();
+
+  if (!queryParam) {
+    return NextResponse.json(
+      { message: 'Query parameter cannot be empty.' },
+      { status: 400 }
+    );
+  }
+
   const pageParam = searchParams.get('page');
 
   const limitParam = searchParams.get('limit');
@@ -42,15 +51,7 @@ export async function GET(requst: NextRequest) {
     );
   }
 
-  const queryParam = searchParams.get('query')?.toLowerCase();
-
-  if (!queryParam) {
-    return NextResponse.json(
-      { message: 'Query is required.' },
-      { status: 400 }
-    );
-  }
-
+  //#region Fetching data
   const filteredUserList = landlordUsers.filter(
     (user) =>
       user.username.toLowerCase().includes(queryParam) ||
@@ -59,7 +60,6 @@ export async function GET(requst: NextRequest) {
       user.middleName.toLowerCase().includes(queryParam)
   );
 
-  //#region Fetching data
   const result: UserLandlordResponse[] = filteredUserList.map((user) => {
     const detail =
       landlordDetails.find((detail) => detail.userId === user.id) ||
@@ -70,6 +70,10 @@ export async function GET(requst: NextRequest) {
       details: omit(detail, ['userId']),
     };
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Sorting data
