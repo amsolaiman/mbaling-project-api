@@ -24,8 +24,8 @@ interface ResponseProps extends IResponse {
   data: UserArrayType;
 }
 
-export async function GET(requst: NextRequest) {
-  const { searchParams } = requst.nextUrl;
+export async function GET(request: NextRequest) {
+  const { searchParams } = request.nextUrl;
 
   const pageParam = searchParams.get('page');
 
