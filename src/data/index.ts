@@ -1,5 +1,6 @@
 // types
 import { IUserItem } from '@/types/user';
+import { IApplicationItem } from '@/types/housing';
 import { IPostItem, IUploadItem } from '@/types/post';
 import { ILandlordDetail, IStudentDetail } from '@/types/detail';
 
@@ -14,6 +15,8 @@ import landlordDetailsJson from './landlord-details.json';
 // posts
 import postListJson from './post-list.json';
 import postUploadsJson from './post-uploads.json';
+// housing
+import applicationListJson from './application-list.json';
 
 // ----------------------------------------------------------------------
 
@@ -42,3 +45,5 @@ export const postUploads = postUploadsJson.map((upload) => ({
   ...upload,
   imgUrl: `${process.env.NEXT_PUBLIC_HOST_URL}${upload.imgUrl}`,
 })) as Array<IUploadItem>;
+
+export const applicationList = applicationListJson as Array<IApplicationItem>;

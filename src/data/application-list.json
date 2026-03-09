@@ -1,0 +1,32 @@
+[
+  {
+    "id": "f0b1c932-55cd-4212-8127-0b9c92e0f5dc",
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
+    "createdAt": "2020-05-30T09:22:16",
+    "createdBy": "a3f9c7d1-7e0b-4cde-9b1e-3e47a589c2d7"
+  },
+  {
+    "id": "39b2c4f41-1f2e-4d63-97a1-8d4b1f1229b8",
+    "housingId": "ec669147-5c0c-4ed3-a5d0-0fc68212a589",
+    "createdAt": "2020-10-13T08:44:41",
+    "createdBy": "78ce89f9-9dbf-4d74-9f41-6f0637f307c7"
+  },
+  {
+    "id": "9f7ab728-becf-4ef6-a55c-f2aa5e5f02f9",
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
+    "createdAt": "2021-03-11T05:45:11",
+    "createdBy": "4d56b5f0-591b-4a53-8397-98bdce8b7f83"
+  },
+  {
+    "id": "3e1e94f6-4a3e-44b6-9202-e35d89dfb31e",
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
+    "createdAt": "2021-09-09T15:47:58",
+    "createdBy": "7ad3e442-b811-4151-93a7-53607eaff9bb"
+  },
+  {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "housingId": "ec669147-5c0c-4ed3-a5d0-0fc68212a589",
+    "createdAt": "2021-11-23T10:27:20",
+    "createdBy": "03b78eb7-03e0-403c-a342-615f864878c1"
+  }
+]
