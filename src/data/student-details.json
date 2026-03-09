@@ -7,7 +7,7 @@
     "department": "Department of Information Sciences",
     "college": "College of Information and Computing Sciences",
     "housingId": null,
-    "applicationId": null
+    "applicationId": "f0b1c932-55cd-4212-8127-0b9c92e0f5dc"
   },
   {
     "id": "b8a7c6f8-19d8-4a35-a3f1-458b47cdd33f",
@@ -17,7 +17,7 @@
     "department": "Department of Information Sciences",
     "college": "College of Information and Computing Sciences",
     "housingId": null,
-    "applicationId": null
+    "applicationId": "9f7ab728-becf-4ef6-a55c-f2aa5e5f02f9"
   },
   {
     "id": "e6b38e2b-7d1e-4b6a-a7d8-cd0eec80d622",
@@ -46,7 +46,7 @@
     "degree": "Bachelor of Science in Biology",
     "department": "Department of Biology",
     "college": "College of Natural Sciences and Mathematics",
-    "housingId": null,
+    "housingId": "db01c126-813e-47f3-bf15-fd1b266628dd",
     "applicationId": null
   },
   {
@@ -56,7 +56,7 @@
     "degree": "Bachelor of Science in Information Systems",
     "department": "Department of Information Sciences",
     "college": "College of Information and Computing Sciences",
-    "housingId": null,
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
     "applicationId": null
   },
   {
@@ -67,7 +67,7 @@
     "department": "Department of Electrical and Electronics Engineering",
     "college": "College of Engineering",
     "housingId": null,
-    "applicationId": null
+    "applicationId": "39b2c4f41-1f2e-4d63-97a1-8d4b1f1229b8"
   },
   {
     "id": "4e25d8a2-1f77-4c6e-85c4-3e8d5967d182",
@@ -76,7 +76,7 @@
     "degree": "Bachelor of Science in Computer Science",
     "department": "Department of Computing Sciences",
     "college": "College of Information and Computing Sciences",
-    "housingId": null,
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
     "applicationId": null
   },
   {
@@ -87,7 +87,7 @@
     "department": "Department of Accountancy",
     "college": "College of Business Administration and Accountancy",
     "housingId": null,
-    "applicationId": null
+    "applicationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
   },
   {
     "id": "cc42b04c-19d8-4f95-b60b-087d6b2d4a6f",
@@ -96,7 +96,7 @@
     "degree": "Bachelor of Science in Business Accountancy (Economics)",
     "department": "Department of Economics",
     "college": "College of Business Administration and Accountancy",
-    "housingId": null,
+    "housingId": "db01c126-813e-47f3-bf15-fd1b266628dd",
     "applicationId": null
   },
   {
@@ -126,7 +126,7 @@
     "degree": "Bachelor of Science in Biology",
     "department": "Department of Biology",
     "college": "College of Natural Sciences and Mathematics",
-    "housingId": null,
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
     "applicationId": null
   },
   {
@@ -136,7 +136,7 @@
     "degree": "Bachelor of Science in Mathematics",
     "department": "Department of Mathematics",
     "college": "College of Natural Sciences and Mathematics",
-    "housingId": null,
+    "housingId": "d3b2f9a7-0a6d-4fef-8e2b-4e3b40d8b8c9",
     "applicationId": null
   },
   {
@@ -146,7 +146,7 @@
     "degree": "Bachelor of Arts in Psychology",
     "department": "Department of Psychology",
     "college": "College of Social Sciences and Humanities",
-    "housingId": null,
+    "housingId": "db01c126-813e-47f3-bf15-fd1b266628dd",
     "applicationId": null
   },
   {
@@ -167,7 +167,7 @@
     "department": "Department of Accountancy",
     "college": "College of Business Administration and Accountancy",
     "housingId": null,
-    "applicationId": null
+    "applicationId": "3e1e94f6-4a3e-44b6-9202-e35d89dfb31e"
   },
   {
     "id": "a84f5d53-d0b4-4e1d-bcb6-0a1f23fcfa6d",
@@ -176,7 +176,7 @@
     "degree": "Bachelor of Science in Information Technology (Network Systems)",
     "department": "Department of Information Sciences",
     "college": "College of Information and Computing Sciences",
-    "housingId": null,
+    "housingId": "db01c126-813e-47f3-bf15-fd1b266628dd",
     "applicationId": null
   },
   {
@@ -186,7 +186,7 @@
     "degree": "Bachelor of Science in Information Technology (Network Systems)",
     "department": "Department of Information Sciences",
     "college": "College of Information and Computing Sciences",
-    "housingId": null,
+    "housingId": "db01c126-813e-47f3-bf15-fd1b266628dd",
     "applicationId": null
   },
   {
