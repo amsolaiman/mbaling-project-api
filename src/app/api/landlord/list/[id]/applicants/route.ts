@@ -13,8 +13,8 @@ import {
 // types
 import { IUserItem } from '@/types/user';
 import { IResponse } from '@/types/response';
+import { HousingApplicantResponse } from '@/types/housing';
 import { ILandlordDetail, IStudentDetail } from '@/types/detail';
-import { HousingApplicantResponse, IApplicationItem } from '@/types/housing';
 
 // ----------------------------------------------------------------------
 
@@ -27,6 +27,12 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+
+  const userById = landlordUsers.find((user) => user.id === id);
+
+  if (!userById) {
+    return NextResponse.json({ message: 'User not found.' }, { status: 404 });
+  }
 
   const { searchParams } = request.nextUrl;
 
@@ -41,19 +47,13 @@ export async function GET(
     );
   }
 
-  const userById = landlordUsers.find((user) => user.id === id);
-
-  if (!userById) {
-    return NextResponse.json({ message: 'User not found.' }, { status: 404 });
-  }
-
   //#region Fetching data
   const detail =
     landlordDetails.find((detail) => detail.userId === userById.id) ||
     ({} as ILandlordDetail);
 
   const applications = applicationList.filter(
-    (appl: IApplicationItem) => appl.housingId === detail.id
+    (appl) => appl.housingId === detail.id
   );
 
   const result: HousingApplicantResponse[] = applications.map((appl) => {
@@ -73,6 +73,10 @@ export async function GET(
       },
     };
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Paginating data
