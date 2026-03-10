@@ -1,4 +1,4 @@
-import { UserStudentResponse } from './user';
+import { UserLandlordResponse, UserStudentResponse } from './user';
 
 // ----------------------------------------------------------------------
 
@@ -13,4 +13,8 @@ export interface IApplicationItem {
 
 export interface HousingApplicantResponse extends IApplicationItem {
   studentDetails: UserStudentResponse;
+}
+
+export interface StudentApplicationResponse extends IApplicationItem {
+  housingDetails: UserLandlordResponse;
 }
