@@ -115,6 +115,18 @@ export const routeConfig: RouteConfig[] = [
         path: '/api/student/search?query=<strong>{query}</strong>',
         note: 'Parameters sort, order, page and limit can be applied',
       },
+      {
+        title: 'Student Housing',
+        type: 'get',
+        caption: 'Get student housing details',
+        path: '/api/student/list/<strong>:id</strong>/housing',
+      },
+      {
+        title: 'Student Application',
+        type: 'get',
+        caption: 'Get student application details',
+        path: '/api/student/list/<strong>:id</strong>/application',
+      },
     ],
   },
   {
