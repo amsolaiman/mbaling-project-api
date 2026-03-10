@@ -66,6 +66,13 @@ export const routeConfig: RouteConfig[] = [
         note: 'Parameters sort, order, page and limit can be applied',
       },
       {
+        title: 'Landlord Tenants',
+        type: 'get',
+        caption: 'Get landlord list of tenants',
+        path: '/api/landlord/list/<strong>:id</strong>/tenants',
+        note: 'Parameters sort, order, page and limit can be applied',
+      },
+      {
         title: 'Landlord Applicants',
         type: 'get',
         caption: 'Get landlord list of applicants',
