@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.4.0...v1.0.0) (2026-03-11)
+
+### Features
+
+- add applicant list-by-landlord api route ([#56](https://github.com/amsolaiman/mbaling-project-api/issues/56)) ([3584365](https://github.com/amsolaiman/mbaling-project-api/commit/35843653019d1633969f9413bcb6c29f1b2b576a))
+- add application list data & types ([#55](https://github.com/amsolaiman/mbaling-project-api/issues/55)) ([4e88cbf](https://github.com/amsolaiman/mbaling-project-api/commit/4e88cbf525aa4d13fb0bf641322c3134178b4ad6))
+- add student application & housing api route to landing page ([#64](https://github.com/amsolaiman/mbaling-project-api/issues/64)) ([e0a4710](https://github.com/amsolaiman/mbaling-project-api/commit/e0a471063600da3a26e7ad3a60c875ed355e075d))
+- add student application deatails api route ([#62](https://github.com/amsolaiman/mbaling-project-api/issues/62)) ([4f03e19](https://github.com/amsolaiman/mbaling-project-api/commit/4f03e198d0c5774b244f2143ca85f0a38d0e0728))
+- add student housing details api route ([#63](https://github.com/amsolaiman/mbaling-project-api/issues/63)) ([f2c812c](https://github.com/amsolaiman/mbaling-project-api/commit/f2c812cd5ce346ae64d9c6b48950fe7d6ce51acb))
+- add tenant list-by-landlord api route ([#59](https://github.com/amsolaiman/mbaling-project-api/issues/59)) ([2273992](https://github.com/amsolaiman/mbaling-project-api/commit/227399299d7898c38ebee60c97a6be25b63fdea7))
+- display applicant list api route to landing page ([#57](https://github.com/amsolaiman/mbaling-project-api/issues/57)) ([f0be4a0](https://github.com/amsolaiman/mbaling-project-api/commit/f0be4a089b6bcac5da1b4d848f9c2ac422e87d49))
+- display tenant list api route to landing page ([#60](https://github.com/amsolaiman/mbaling-project-api/issues/60)) ([9a1a1c7](https://github.com/amsolaiman/mbaling-project-api/commit/9a1a1c7edf622e66bcb49caedaeac4af09a583a8))
+
+### Bug Fixes
+
+- fix error handling of applicant list api ([#61](https://github.com/amsolaiman/mbaling-project-api/issues/61)) ([62a7064](https://github.com/amsolaiman/mbaling-project-api/commit/62a7064e9d290a921f3be53db17df3dd99ed338a))
+
+### Refactoring
+
+- update code & error handling of all post apis ([#65](https://github.com/amsolaiman/mbaling-project-api/issues/65)) ([f8a846b](https://github.com/amsolaiman/mbaling-project-api/commit/f8a846b8be3e5f032243e0110c11c4640142631a))
+- update code & error handling of user list & details apis ([#66](https://github.com/amsolaiman/mbaling-project-api/issues/66)) ([af4abfc](https://github.com/amsolaiman/mbaling-project-api/commit/af4abfcd5ab1ec51e2a6675829c9a90a5ef137d0))
+
 ## [0.4.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.3.0...v0.4.0) (2026-03-04)
 
 ### Features
