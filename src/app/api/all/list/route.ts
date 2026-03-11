@@ -49,9 +49,9 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  //#region Fetching data
   const userList = [...landlordUsers, ...studentUsers];
 
-  //#region Fetching data
   const result: UserArrayType = userList.map((user) => {
     if (user.role === 'landlord') {
       const detail =
@@ -73,6 +73,10 @@ export async function GET(request: NextRequest) {
       };
     }
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Sorting data

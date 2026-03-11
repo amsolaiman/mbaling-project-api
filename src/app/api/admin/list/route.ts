@@ -45,6 +45,10 @@ export async function GET(request: NextRequest) {
   const result: UserAdminResponse[] = adminUsers.map((user) => ({
     ...omit(user, ['password']),
   }));
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Sorting data

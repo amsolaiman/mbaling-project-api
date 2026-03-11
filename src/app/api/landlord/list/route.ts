@@ -53,6 +53,10 @@ export async function GET(request: NextRequest) {
       details: omit(detail, ['userId']),
     };
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Sorting data
