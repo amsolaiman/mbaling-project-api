@@ -19,6 +19,15 @@ interface ResponseProps extends IResponse {
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
 
+  const queryParam = searchParams.get('id');
+
+  if (queryParam && !queryParam.trim()) {
+    return NextResponse.json(
+      { message: 'ID parameter cannot be empty.' },
+      { status: 400 }
+    );
+  }
+
   const pageParam = searchParams.get('page');
 
   const limitParam = searchParams.get('limit');
@@ -26,15 +35,6 @@ export async function GET(request: NextRequest) {
   if (limitParam && !pageParam) {
     return NextResponse.json(
       { message: 'Page parameter is required when limit is provided.' },
-      { status: 400 }
-    );
-  }
-
-  const queryParam = searchParams.get('id');
-
-  if (queryParam && !queryParam.trim()) {
-    return NextResponse.json(
-      { message: 'ID parameter cannot be empty.' },
       { status: 400 }
     );
   }
@@ -53,19 +53,19 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const housing: ILandlordDetail | undefined = landlordDetails.find(
-    (detail: ILandlordDetail) => detail.userId === queryParam
-  );
+  const housing =
+    landlordDetails.find((detail) => detail.userId === queryParam) ||
+    ({} as ILandlordDetail);
 
-  if (!housing) {
+  if (!housing.id) {
     return NextResponse.json({ message: 'No results found.' }, { status: 404 });
   }
 
+  //#region Fetching data
   const filteredPosts = postList.filter(
     (post) => post.housingId === housing.id
   );
 
-  //#region Fetching data
   const result: PostResponse[] = filteredPosts.map((post) => {
     const detail =
       landlordDetails.find((detail) => detail.id === post.housingId) ||
@@ -84,14 +84,18 @@ export async function GET(request: NextRequest) {
       uploads: uploads.map((upload) => ({
         ...omit(upload, ['postId']),
       })),
-      createdBy: isWithUser
-        ? {
-            ...omit(user, ['password']),
-            details: omit(detail, ['userId']),
-          }
-        : undefined,
+      ...(isWithUser && {
+        createdBy: {
+          ...omit(user, ['password']),
+          details: omit(detail, ['userId']),
+        },
+      }),
     };
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Paginating data
