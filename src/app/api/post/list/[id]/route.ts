@@ -17,6 +17,12 @@ export async function GET(
 ) {
   const { id } = await params;
 
+  const postById = postList.find((post) => post.id === id);
+
+  if (!postById) {
+    return NextResponse.json({ message: 'Post not found.' }, { status: 404 });
+  }
+
   const { searchParams } = request.nextUrl;
 
   const withUserParam = searchParams.get('createdBy');
@@ -31,12 +37,6 @@ export async function GET(
       },
       { status: 400 }
     );
-  }
-
-  const postById = postList.find((post) => post.id === id);
-
-  if (!postById) {
-    return NextResponse.json({ message: 'Post not found.' }, { status: 404 });
   }
 
   const detail =
@@ -56,12 +56,12 @@ export async function GET(
     uploads: uploads.map((upload) => ({
       ...omit(upload, ['postId']),
     })),
-    createdBy: isWithUser
-      ? {
-          ...omit(user, ['password']),
-          details: omit(detail, ['userId']),
-        }
-      : undefined,
+    ...(isWithUser && {
+      createdBy: {
+        ...omit(user, ['password']),
+        details: omit(detail, ['userId']),
+      },
+    }),
   };
 
   return NextResponse.json(result, { status: 200 });

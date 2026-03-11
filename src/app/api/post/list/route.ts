@@ -63,14 +63,18 @@ export async function GET(request: NextRequest) {
       uploads: uploads.map((upload) => ({
         ...omit(upload, ['postId']),
       })),
-      createdBy: isWithUser
-        ? {
-            ...omit(user, ['password']),
-            details: omit(detail, ['userId']),
-          }
-        : undefined,
+      ...(isWithUser && {
+        createdBy: {
+          ...omit(user, ['password']),
+          details: omit(detail, ['userId']),
+        },
+      }),
     };
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Paginating data

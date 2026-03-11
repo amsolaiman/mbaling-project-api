@@ -19,6 +19,15 @@ interface ResponseProps extends IResponse {
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
 
+  const queryParam = searchParams.get('query')?.toLowerCase();
+
+  if (queryParam && !queryParam.trim()) {
+    return NextResponse.json(
+      { message: 'Query parameter cannot be empty.' },
+      { status: 400 }
+    );
+  }
+
   const pageParam = searchParams.get('page');
 
   const limitParam = searchParams.get('limit');
@@ -26,15 +35,6 @@ export async function GET(request: NextRequest) {
   if (limitParam && !pageParam) {
     return NextResponse.json(
       { message: 'Page parameter is required when limit is provided.' },
-      { status: 400 }
-    );
-  }
-
-  const queryParam = searchParams.get('query')?.toLowerCase();
-
-  if (queryParam && !queryParam.trim()) {
-    return NextResponse.json(
-      { message: 'Query parameter cannot be empty.' },
       { status: 400 }
     );
   }
@@ -53,11 +53,11 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  //#region Fetching data
   const filteredPosts = queryParam
     ? postList.filter((post) => post.title.toLowerCase().includes(queryParam))
     : postList;
 
-  //#region Fetching data
   const result: PostResponse[] = filteredPosts.map((post) => {
     const detail =
       landlordDetails.find((detail) => detail.id === post.housingId) ||
@@ -76,14 +76,18 @@ export async function GET(request: NextRequest) {
       uploads: uploads.map((upload) => ({
         ...omit(upload, ['postId']),
       })),
-      createdBy: isWithUser
-        ? {
-            ...omit(user, ['password']),
-            details: omit(detail, ['userId']),
-          }
-        : undefined,
+      ...(isWithUser && {
+        createdBy: {
+          ...omit(user, ['password']),
+          details: omit(detail, ['userId']),
+        },
+      }),
     };
   });
+
+  if (!result.length) {
+    return NextResponse.json({ message: 'No results found.' }, { status: 404 });
+  }
   //#endregion
 
   //#region Paginating data
