@@ -5,7 +5,7 @@ import { omit } from '@/utils/object';
 // data
 import { adminUsers } from '@/data';
 // types
-import { UserAdminResponse } from '@/types/user';
+import { IUserItem, UserAdminResponse } from '@/types/user';
 
 // ----------------------------------------------------------------------
 
@@ -15,9 +15,10 @@ export async function GET(
 ) {
   const { id } = await params;
 
-  const userById = adminUsers.find((user) => user.id === id);
+  const userById =
+    adminUsers.find((user) => user.id === id) || ({} as IUserItem);
 
-  if (!userById) {
+  if (!userById.id) {
     return NextResponse.json({ message: 'User not found.' }, { status: 404 });
   }
 

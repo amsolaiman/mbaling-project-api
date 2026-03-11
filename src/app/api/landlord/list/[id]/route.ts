@@ -6,7 +6,7 @@ import { omit } from '@/utils/object';
 import { landlordDetails, landlordUsers } from '@/data';
 // types
 import { ILandlordDetail } from '@/types/detail';
-import { UserLandlordResponse } from '@/types/user';
+import { IUserItem, UserLandlordResponse } from '@/types/user';
 
 // ----------------------------------------------------------------------
 
@@ -16,9 +16,10 @@ export async function GET(
 ) {
   const { id } = await params;
 
-  const userById = landlordUsers.find((user) => user.id === id);
+  const userById =
+    landlordUsers.find((user) => user.id === id) || ({} as IUserItem);
 
-  if (!userById) {
+  if (!userById.id) {
     return NextResponse.json({ message: 'User not found.' }, { status: 404 });
   }
 
