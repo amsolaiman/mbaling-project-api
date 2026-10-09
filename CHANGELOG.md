@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/amsolaiman/mbaling-project-api/compare/v1.0.0...v1.1.0) (2026-10-09)
+
+### Features
+
+- add 1-hr access token expiration to auth login ([#67](https://github.com/amsolaiman/mbaling-project-api/issues/67)) ([6d3b066](https://github.com/amsolaiman/mbaling-project-api/commit/6d3b06627b66b19a73e98b15b71fbbe0ae47d2b1))
+
+### Bug Fixes
+
+- re-arrange posts' images ([#68](https://github.com/amsolaiman/mbaling-project-api/issues/68)) ([f0a40dc](https://github.com/amsolaiman/mbaling-project-api/commit/f0a40dc034d22e8929fa32b67b826eefdea0afec))
+
 ## [1.0.0](https://github.com/amsolaiman/mbaling-project-api/compare/v0.4.0...v1.0.0) (2026-03-11)
 
 ### Features
